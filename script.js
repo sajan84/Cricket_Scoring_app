@@ -140,15 +140,21 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
 
         let undo=document.querySelector('.undo')
         undo.addEventListener('click',function (e) {
-            if (flag1==1) {
+            if (balls==total_over*6) {
+                alert("Undo is not possible")
+                
+            }
+            else if (flag1==1) {
                 score=score-temp;
+                if (ball==0) {
+                    over--; 
+                    ball=6;
+                    
+                }
 
                 ball--;
                 balls++;
-                if (ball==5) {
-                    over--; 
-                    ball=6;
-                }
+               
 
                 run.textContent=score;
                 Ov.textContent=over;
@@ -165,13 +171,15 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
         Target.textContent=target-score
             }
             else if (flag4==1) {
+                if (ball==0) {
+                    over--; 
+                    ball=6;
+                    
+                }
                 wicket--;
             ball--;
                 balls++;
-                if (ball==5) {
-                    over--; 
-                    ball=5;
-                }
+                
 
                 run.textContent=score;
                 Ov.textContent=over;
@@ -183,12 +191,14 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
 
             else if (flag5==1 || flag6==1) {
                 score=score-temp;
+                if (ball==0) {
+                    over--; 
+                    ball=6;
+                    
+                }
                 ball--;
                 balls++;
-                if (ball==5) {
-                    over--; 
-                    ball=5;
-                }
+                
         run.textContent=score;
         Ov.textContent=over;
         Ball.textContent=ball;
@@ -198,6 +208,8 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
         })
 
         function valid() {
+
+            
             if (target<=score) {
            
            flag1=flag2=flag3=flag4=flag5=flag6=0
