@@ -47,7 +47,7 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
         WD.addEventListener('click',function (e) {
             let extra_run=prompt("Enter extra run if not than 0");
             temp=(Number)(extra_run)
-            score=score+(Number)(extra_run)+(Number)(1);  
+            score=score+(Number)(extra_run)+1;  
             run.textContent=score;
         Ov.textContent=over;
         Ball.textContent=ball;
@@ -64,7 +64,7 @@ let flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
         NB.addEventListener('click',function (e) {
         let extra_run=prompt("Enter extra run if not than 0");
         temp=(Number)(extra_run)
-        score=score+(Number)(extra_run)+(Number)1;  
+        score=score+(Number)(extra_run)+1;  
         run.textContent=score;
         Ov.textContent=over;
         Ball.textContent=ball;
